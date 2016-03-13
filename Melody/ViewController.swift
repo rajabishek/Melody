@@ -38,10 +38,13 @@ class ViewController: UIViewController {
         switch reachabilityStatus {
         case NOACCESS: view.backgroundColor = UIColor.redColor()
         displayLabel.text = reachabilityStatus
+        displayLabel.textColor = UIColor.whiteColor()
         case WIFI: view.backgroundColor = UIColor.greenColor()
         displayLabel.text = reachabilityStatus
+        displayLabel.textColor = UIColor.blackColor()
         case WWAN: view.backgroundColor = UIColor.yellowColor()
         displayLabel.text = reachabilityStatus
+        displayLabel.textColor = UIColor.blackColor()
         default: return
         }
     }
