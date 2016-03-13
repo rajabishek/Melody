@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         apiManager.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=10/json", completion: didLoadData)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     func didLoadData(musicVideos: [MusicVideo]) {
         for (index, musicVideo) in musicVideos.enumerate() {
             print(index, musicVideo.name)
@@ -40,12 +45,10 @@ class ViewController: UIViewController {
         default: return
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachabilityStatusChanged", object: nil)
     }
-
 
 }
 
