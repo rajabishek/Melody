@@ -20,26 +20,25 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sma-W4-aPE" id="2jU-MZ-14N">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="129.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TgW-aO-I5b">
-                                            <rect key="frame" x="8" y="8" width="130" height="114"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="138" height="130"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="KuS-Iw-4TO"/>
+                                                <constraint firstAttribute="width" constant="138" id="ihH-Gm-oYs"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-IR-Ybr">
-                                            <rect key="frame" x="146" y="8" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-IR-Ybr">
+                                            <rect key="frame" x="148" y="8" width="444" height="20"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="42" id="Kah-8C-7CA"/>
-                                                <constraint firstAttribute="height" constant="21" id="alY-ZR-ltz"/>
+                                                <constraint firstAttribute="height" constant="20" id="F1e-O9-Naa"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Video Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2v-11-ZQF">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2v-11-ZQF">
                                             <rect key="frame" x="146" y="37" width="446" height="85"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,21 +47,22 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="centerY" secondItem="2jU-MZ-14N" secondAttribute="centerY" id="6t8-ZO-uRd"/>
-                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="top" secondItem="ceG-IR-Ybr" secondAttribute="top" id="BBd-NG-5zM"/>
-                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="leading" secondItem="2jU-MZ-14N" secondAttribute="leadingMargin" id="GuN-DV-SvK"/>
-                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="bottom" secondItem="TgW-aO-I5b" secondAttribute="bottom" id="Ljj-xl-aQF"/>
-                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="trailing" secondItem="2jU-MZ-14N" secondAttribute="trailingMargin" id="Yso-sq-nRw"/>
-                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="top" secondItem="2jU-MZ-14N" secondAttribute="topMargin" id="ZV6-O3-hme"/>
-                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="top" secondItem="ceG-IR-Ybr" secondAttribute="bottom" constant="8" symbolic="YES" id="blc-Cc-SKP"/>
-                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="leading" secondItem="TgW-aO-I5b" secondAttribute="trailing" constant="8" symbolic="YES" id="m4i-Xe-Koh"/>
-                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="leading" secondItem="ceG-IR-Ybr" secondAttribute="leading" id="z5M-Z2-e7h"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="trailing" secondItem="W2v-11-ZQF" secondAttribute="trailing" id="4ao-Uw-rjv"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="top" secondItem="2jU-MZ-14N" secondAttribute="topMargin" id="Fpv-ob-PLA"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="leading" secondItem="TgW-aO-I5b" secondAttribute="trailing" constant="8" symbolic="YES" id="K64-cP-MIb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="W2v-11-ZQF" secondAttribute="bottom" constant="-0.5" id="Nam-lT-WQH"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="leading" secondItem="TgW-aO-I5b" secondAttribute="trailing" constant="10" id="OLS-0Y-3JR"/>
+                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="centerY" secondItem="2jU-MZ-14N" secondAttribute="centerY" id="Ptq-Yc-3IR"/>
+                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="leading" secondItem="2jU-MZ-14N" secondAttribute="leading" id="T3P-aq-1or"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="trailing" secondItem="2jU-MZ-14N" secondAttribute="trailingMargin" id="Tuv-Yu-rUx"/>
+                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="top" secondItem="2jU-MZ-14N" secondAttribute="top" id="htr-CW-ary"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="top" secondItem="ceG-IR-Ybr" secondAttribute="bottom" constant="9" id="pKH-gk-fA9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="artistTextLabel" destination="ceG-IR-Ybr" id="XaS-4z-Yl0"/>
                                     <outlet property="musicVideoImageView" destination="TgW-aO-I5b" id="Fd4-rY-TxH"/>
-                                    <outlet property="nameTextLabel" destination="W2v-11-ZQF" id="8bX-I6-dnv"/>
-                                    <outlet property="rankTextLabel" destination="ceG-IR-Ybr" id="lTx-ks-kQf"/>
+                                    <outlet property="nameTextLabel" destination="W2v-11-ZQF" id="U4P-yO-ffg"/>
                                     <segue destination="glS-1c-HDf" kind="show" identifier="MusicDetailSegue" id="yG7-9i-lo9"/>
                                 </connections>
                             </tableViewCell>

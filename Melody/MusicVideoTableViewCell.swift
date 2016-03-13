@@ -12,7 +12,7 @@ class MusicVideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var musicVideoImageView: UIImageView!
     
-    @IBOutlet weak var rankTextLabel: UILabel!
+    @IBOutlet weak var artistTextLabel: UILabel!
     
     @IBOutlet weak var nameTextLabel: UILabel!
     
@@ -23,8 +23,9 @@ class MusicVideoTableViewCell: UITableViewCell {
     }
     
     func populateCellFromMusicVideo() {
-        rankTextLabel.text = "\(musicVideo!.rank)"
+        
         nameTextLabel.text = musicVideo!.name
+        artistTextLabel.text = musicVideo!.artist
         //musicVideoImageView.image = UIImage(named: "noImage")
         
         if let imageData = musicVideo!.imageData {
