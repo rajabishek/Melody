@@ -68,11 +68,9 @@ class MusicVideosTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MusicVideoCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("MusicVideoCell", forIndexPath: indexPath) as! MusicVideoTableViewCell
         let musicVideo = musicVideos[indexPath.row]
-        cell.textLabel!.text = "\(musicVideo.rank)"
-        cell.detailTextLabel!.text = musicVideo.name
-        //cell.imageView!.image = UIImage(named: musicVideo.imageUrl)
+        cell.musicVideo = musicVideo
         
         return cell
     }

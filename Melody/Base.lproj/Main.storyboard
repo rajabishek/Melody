@@ -6,11 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Music Videos Table View Controller-->
+        <!--iTunes Music Videos-->
         <scene sceneID="qus-br-g3v">
             <objects>
                 <tableViewController id="Zog-11-447" customClass="MusicVideosTableViewController" customModule="Melody" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JHP-Ev-KQp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" id="JHP-Ev-KQp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -22,41 +22,47 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TgW-aO-I5b">
-                                            <rect key="frame" x="8" y="8" width="200" height="114"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TgW-aO-I5b">
+                                            <rect key="frame" x="8" y="8" width="130" height="114"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="200" id="ShZ-m4-6PL"/>
+                                                <constraint firstAttribute="width" constant="130" id="KuS-Iw-4TO"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Video Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2v-11-ZQF">
-                                            <rect key="frame" x="216" y="37" width="376" height="85"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-IR-Ybr">
-                                            <rect key="frame" x="216" y="8" width="42" height="21"/>
+                                            <rect key="frame" x="146" y="8" width="42" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="42" id="GNF-hy-cOI"/>
-                                                <constraint firstAttribute="height" constant="21" id="m4Z-ap-w3d"/>
+                                                <constraint firstAttribute="width" constant="42" id="Kah-8C-7CA"/>
+                                                <constraint firstAttribute="height" constant="21" id="alY-ZR-ltz"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Video Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2v-11-ZQF">
+                                            <rect key="frame" x="146" y="37" width="446" height="85"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="leading" secondItem="2jU-MZ-14N" secondAttribute="leadingMargin" id="1iy-hx-KpO"/>
-                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="bottom" secondItem="TgW-aO-I5b" secondAttribute="bottom" id="8Sq-Oo-BPb"/>
-                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="leading" secondItem="ceG-IR-Ybr" secondAttribute="leading" id="C0N-PA-LrJ"/>
-                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="top" secondItem="TgW-aO-I5b" secondAttribute="top" id="L62-VB-0je"/>
-                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="centerY" secondItem="2jU-MZ-14N" secondAttribute="centerY" id="cyJ-ss-Sbb"/>
-                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="leading" secondItem="TgW-aO-I5b" secondAttribute="trailing" constant="8" symbolic="YES" id="fcU-eY-hEE"/>
-                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="trailing" secondItem="2jU-MZ-14N" secondAttribute="trailingMargin" id="iT5-vA-0LO"/>
-                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="top" secondItem="ceG-IR-Ybr" secondAttribute="bottom" constant="8" symbolic="YES" id="iXc-fu-dTC"/>
-                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="top" secondItem="2jU-MZ-14N" secondAttribute="topMargin" id="vYq-eU-AAx"/>
+                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="centerY" secondItem="2jU-MZ-14N" secondAttribute="centerY" id="6t8-ZO-uRd"/>
+                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="top" secondItem="ceG-IR-Ybr" secondAttribute="top" id="BBd-NG-5zM"/>
+                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="leading" secondItem="2jU-MZ-14N" secondAttribute="leadingMargin" id="GuN-DV-SvK"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="bottom" secondItem="TgW-aO-I5b" secondAttribute="bottom" id="Ljj-xl-aQF"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="trailing" secondItem="2jU-MZ-14N" secondAttribute="trailingMargin" id="Yso-sq-nRw"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="top" secondItem="2jU-MZ-14N" secondAttribute="topMargin" id="ZV6-O3-hme"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="top" secondItem="ceG-IR-Ybr" secondAttribute="bottom" constant="8" symbolic="YES" id="blc-Cc-SKP"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="leading" secondItem="TgW-aO-I5b" secondAttribute="trailing" constant="8" symbolic="YES" id="m4i-Xe-Koh"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="leading" secondItem="ceG-IR-Ybr" secondAttribute="leading" id="z5M-Z2-e7h"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="musicVideoImageView" destination="TgW-aO-I5b" id="Fd4-rY-TxH"/>
+                                    <outlet property="nameTextLabel" destination="W2v-11-ZQF" id="8bX-I6-dnv"/>
+                                    <outlet property="rankTextLabel" destination="ceG-IR-Ybr" id="lTx-ks-kQf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,7 +70,7 @@
                             <outlet property="delegate" destination="Zog-11-447" id="6L0-EI-5kz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Zfj-FM-OBQ"/>
+                    <navigationItem key="navigationItem" title="iTunes Music Videos" id="Zfj-FM-OBQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAa-NH-tvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="C1j-Xq-P6N">
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="C1j-Xq-P6N">
                         <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
