@@ -23,9 +23,6 @@ class MusicVideosTableViewController: UITableViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "internetReachabilityChanged", name: "ReachabilityStatusChanged", object: nil)
         internetReachabilityChanged()
-        
-        let apiManager = APIManager()
-        apiManager.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json", completion: didLoadData)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,16 +37,22 @@ class MusicVideosTableViewController: UITableViewController {
     
     func internetReachabilityChanged() {
         switch reachabilityStatus {
-        case NOACCESS: view.backgroundColor = UIColor.redColor()
-        //displayLabel.text = reachabilityStatus
-        //displayLabel.textColor = UIColor.whiteColor()
-        case WIFI: view.backgroundColor = UIColor.greenColor()
-        //displayLabel.text = reachabilityStatus
-        //displayLabel.textColor = UIColor.blackColor()
-        case WWAN: view.backgroundColor = UIColor.yellowColor()
-        //displayLabel.text = reachabilityStatus
-        //displayLabel.textColor = UIColor.blackColor()
-        default: return
+        case NOACCESS:
+            view.backgroundColor = UIColor.redColor()
+            dispatch_async(dispatch_get_main_queue()) {
+                let alert = UIAlertController(title: "No internet access", message: "Please make sure you are connected to the internet", preferredStyle: .Alert)
+                let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        default: view.backgroundColor =
+            UIColor.greenColor()
+            if musicVideos.isEmpty {
+                let apiManager = APIManager()
+                apiManager.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json", completion: didLoadData)
+            } else {
+                print("Dont call the API at all")
+            }
         }
     }
 
