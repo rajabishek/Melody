@@ -18,6 +18,7 @@
 		CC2B3A891C9545D8001FFB2B /* MusicVideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */; };
 		CC2B3A8B1C9562AC001FFB2B /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */; };
 		CC9CA6CE1C95C39200D5D38A /* MusicVideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9CA6CD1C95C39200D5D38A /* MusicVideoDetailViewController.swift */; };
+		CC9CA6D01C95EB1200D5D38A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9CA6CF1C95EB1200D5D38A /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideosTableViewController.swift; sourceTree = "<group>"; };
 		CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
 		CC9CA6CD1C95C39200D5D38A /* MusicVideoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailViewController.swift; sourceTree = "<group>"; };
+		CC9CA6CF1C95EB1200D5D38A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */,
 				CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */,
 				CC9CA6CD1C95C39200D5D38A /* MusicVideoDetailViewController.swift */,
+				CC9CA6CF1C95EB1200D5D38A /* SettingsTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				CC2B3A871C9533D1001FFB2B /* Reachability.m in Sources */,
 				CC2B3A8B1C9562AC001FFB2B /* MusicVideoTableViewCell.swift in Sources */,
 				CC2B3A801C9531BA001FFB2B /* Constants.swift in Sources */,
+				CC9CA6D01C95EB1200D5D38A /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

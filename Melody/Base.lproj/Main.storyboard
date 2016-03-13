@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="1159" y="-539"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings Table View Controller-->
         <scene sceneID="ide-nk-vQg">
             <objects>
-                <tableViewController id="kQu-Qt-6ct" sceneMemberID="viewController">
+                <tableViewController id="kQu-Qt-6ct" customClass="SettingsTableViewController" customModule="Melody" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" id="OOt-nv-6TC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
