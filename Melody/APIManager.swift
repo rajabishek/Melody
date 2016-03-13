@@ -10,7 +10,7 @@ import Foundation
 
 class APIManager {
     
-    func loadData(urlString: String, completion: (String) -> Void) {
+    func loadData(urlString: String, completion: ([MusicVideo]) -> Void) {
         if let url = NSURL(string: urlString) {
             let configuration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
             let session = NSURLSession(configuration: configuration)
@@ -22,7 +22,13 @@ class APIManager {
                 } else {
                     do {
                         if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionary, let feed = json["feed"] as? JSONDictionary, let entry = feed["entry"] as? JSONArray {
-                            completion("JSONParsing successful")
+                            var musicVideos = [MusicVideo]()
+                            for item in entry {
+                                if let dictionary = item as? JSONDictionary {
+                                    musicVideos.append(MusicVideo(fromJSONDictionary: dictionary))
+                                }
+                            }
+                            completion(musicVideos)
                         }
                     } catch {
                         print("Error in parsing json data")
