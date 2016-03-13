@@ -14,3 +14,7 @@ typealias JSONArray = [AnyObject]
 let NOACCESS = "No internet connection"
 let WIFI = "Wifi access available"
 let WWAN = "Cellular data available"
+
+private struct Storyboard {
+    static let musicVideoCellReuseIdentifier = "MusicVideoCell"
+}
