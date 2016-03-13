@@ -21,8 +21,8 @@ class APIManager {
                     print("Error in fetching the data")
                 } else {
                     do {
-                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String: AnyObject], let feed = json["feed"] as? [String: AnyObject], let entry = feed["entry"] as? [AnyObject] {
-                            completion("JSONParsing successfull")
+                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionary, let feed = json["feed"] as? JSONDictionary, let entry = feed["entry"] as? JSONArray {
+                            completion("JSONParsing successful")
                         }
                     } catch {
                         print("Error in parsing json data")
