@@ -161,8 +161,11 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ZZ-wU-2Vz">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7ZZ-wU-2Vz">
                                                     <rect key="frame" x="543" y="26" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="changeSecuritySettings:" destination="kQu-Qt-6ct" eventType="valueChanged" id="H50-Rb-pTz"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -187,8 +190,11 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9f-Lv-zOZ">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v9f-Lv-zOZ">
                                                     <rect key="frame" x="543" y="26" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="changeImageQualitySettings:" destination="kQu-Qt-6ct" eventType="valueChanged" id="cHT-Oj-W2C"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -247,6 +253,16 @@
                             <outlet property="delegate" destination="kQu-Qt-6ct" id="MuH-aE-EgF"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="aboutTextLabel" destination="g8P-AQ-cNL" id="KfM-Lh-GaL"/>
+                        <outlet property="apiCountSlider" destination="m1I-k2-xMU" id="edk-3d-QDg"/>
+                        <outlet property="apiCountTextLabel" destination="ViF-Ke-q2D" id="FOC-Wh-pVQ"/>
+                        <outlet property="feedbackTextLabel" destination="s5B-1S-dDU" id="u8m-3w-1hQ"/>
+                        <outlet property="imageQualitySwitch" destination="v9f-Lv-zOZ" id="vm7-nD-jYl"/>
+                        <outlet property="imageQualityTextLabel" destination="OVP-IE-exP" id="Vpr-ME-MDV"/>
+                        <outlet property="securityTextLabel" destination="ZO8-6u-VwM" id="irg-7K-Ora"/>
+                        <outlet property="touchIdSwitch" destination="7ZZ-wU-2Vz" id="X99-Qy-zpQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgG-t6-Mjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
