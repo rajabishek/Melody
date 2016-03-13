@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="488" id="1cT-uK-wAZ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoMusicCell" textLabel="CCm-i7-d62" detailTextLabel="bM5-1L-kCz" style="IBUITableViewCellStyleSubtitle" id="Nad-ap-wBe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicVideoCell" textLabel="CCm-i7-d62" detailTextLabel="bM5-1L-kCz" style="IBUITableViewCellStyleSubtitle" id="Nad-ap-wBe">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nad-ap-wBe" id="DWx-vd-aai">

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var displayLabel: UILabel!
     
@@ -37,6 +37,7 @@ class ViewController: UIViewController {
             print(index, musicVideo.name)
         }
         self.musicVideos = musicVideos
+        tableView.reloadData()
     }
     
     func internetReachabilityChanged() {
@@ -52,6 +53,24 @@ class ViewController: UIViewController {
         displayLabel.textColor = UIColor.blackColor()
         default: return
         }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return musicVideos.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("MusicVideoCell", forIndexPath: indexPath)
+        cell.textLabel!.text = musicVideos[indexPath.row].name
+        cell.detailTextLabel!.text = musicVideos[indexPath.row].artist
+        //cell.imageView!.image = UIImage(named: musicVideos[indexPath.row].imageUrl)
+        
+        return cell
     }
     
     deinit{
