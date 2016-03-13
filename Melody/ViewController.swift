@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    var musicVideos = [MusicVideo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,6 +36,7 @@ class ViewController: UIViewController {
         for (index, musicVideo) in musicVideos.enumerate() {
             print(index, musicVideo.name)
         }
+        self.musicVideos = musicVideos
     }
     
     func internetReachabilityChanged() {
