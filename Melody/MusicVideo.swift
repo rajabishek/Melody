@@ -32,6 +32,8 @@ class MusicVideo {
     
     let releaseDate: String
     
+    var imageData: NSData?
+    
     init(fromJSONDictionary data: JSONDictionary) {
         
         if let nameData = data["im:name"] as? JSONDictionary, let name = nameData["label"] as? String {

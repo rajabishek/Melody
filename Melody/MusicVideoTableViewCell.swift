@@ -10,20 +10,46 @@ import UIKit
 
 class MusicVideoTableViewCell: UITableViewCell {
 
-    var musicVideo: MusicVideo? {
-        didSet {
-            rankTextLabel.text = "\(musicVideo!.rank)"
-            nameTextLabel.text = musicVideo!.name
-            musicVideoImageView.image = UIImage(named: "noImage")
-        }
-    }
-    
-    
     @IBOutlet weak var musicVideoImageView: UIImageView!
     
     @IBOutlet weak var rankTextLabel: UILabel!
     
     @IBOutlet weak var nameTextLabel: UILabel!
+    
+    var musicVideo: MusicVideo? {
+        didSet {
+            populateCellFromMusicVideo()
+        }
+    }
+    
+    func populateCellFromMusicVideo() {
+        rankTextLabel.text = "\(musicVideo!.rank)"
+        nameTextLabel.text = musicVideo!.name
+        //musicVideoImageView.image = UIImage(named: "noImage")
+        
+        if let imageData = musicVideo!.imageData {
+            musicVideoImageView.image = UIImage(data: imageData)
+        } else {
+            getMusicVideoImage(musicVideo!, imageView: musicVideoImageView)
+        }
+    }
+    
+    func getMusicVideoImage(musicVideo: MusicVideo, imageView: UIImageView) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            if let url = NSURL(string: musicVideo.imageUrl), let data = NSData(contentsOfURL: url), let image = UIImage(data: data) {
+                musicVideo.imageData = data
+                dispatch_async(dispatch_get_main_queue()) {
+                    imageView.image = image
+                }
+            }
+            else {
+                dispatch_async(dispatch_get_main_queue()) {
+                    print("Raj Abishek....")
+                    imageView.image = UIImage(named: "noImage")
+                }
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
