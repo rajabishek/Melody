@@ -54,14 +54,46 @@
 		CC2B3A651C952D71001FFB2B /* Melody */ = {
 			isa = PBXGroup;
 			children = (
-				CC2B3A661C952D71001FFB2B /* AppDelegate.swift */,
-				CC2B3A681C952D71001FFB2B /* ViewController.swift */,
-				CC2B3A6A1C952D71001FFB2B /* Main.storyboard */,
-				CC2B3A6D1C952D71001FFB2B /* Assets.xcassets */,
-				CC2B3A6F1C952D71001FFB2B /* LaunchScreen.storyboard */,
-				CC2B3A721C952D71001FFB2B /* Info.plist */,
+				CC2B3A7B1C952EBB001FFB2B /* Model */,
+				CC2B3A781C952EA4001FFB2B /* Supporting Files */,
+				CC2B3A791C952EAE001FFB2B /* Controller */,
+				CC2B3A7A1C952EB6001FFB2B /* View */,
 			);
 			path = Melody;
+			sourceTree = "<group>";
+		};
+		CC2B3A781C952EA4001FFB2B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC2B3A661C952D71001FFB2B /* AppDelegate.swift */,
+				CC2B3A6D1C952D71001FFB2B /* Assets.xcassets */,
+				CC2B3A721C952D71001FFB2B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC2B3A791C952EAE001FFB2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC2B3A681C952D71001FFB2B /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CC2B3A7A1C952EB6001FFB2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC2B3A6A1C952D71001FFB2B /* Main.storyboard */,
+				CC2B3A6F1C952D71001FFB2B /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CC2B3A7B1C952EBB001FFB2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
