@@ -44,7 +44,6 @@ class MusicVideoTableViewCell: UITableViewCell {
             }
             else {
                 dispatch_async(dispatch_get_main_queue()) {
-                    print("Raj Abishek....")
                     imageView.image = UIImage(named: "noImage")
                 }
             }
