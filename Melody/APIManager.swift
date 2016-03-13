@@ -28,7 +28,9 @@ class APIManager {
                                     musicVideos.append(MusicVideo(fromJSONDictionary: dictionary))
                                 }
                             }
-                            completion(musicVideos)
+                            dispatch_async(dispatch_get_main_queue()) {
+                                completion(musicVideos)
+                            }
                         }
                     } catch {
                         print("Error in parsing json data")

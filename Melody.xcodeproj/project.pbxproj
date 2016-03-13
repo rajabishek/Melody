@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CC2B3A671C952D71001FFB2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A661C952D71001FFB2B /* AppDelegate.swift */; };
-		CC2B3A691C952D71001FFB2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A681C952D71001FFB2B /* ViewController.swift */; };
 		CC2B3A6C1C952D71001FFB2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2B3A6A1C952D71001FFB2B /* Main.storyboard */; };
 		CC2B3A6E1C952D71001FFB2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2B3A6D1C952D71001FFB2B /* Assets.xcassets */; };
 		CC2B3A711C952D71001FFB2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2B3A6F1C952D71001FFB2B /* LaunchScreen.storyboard */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		CC2B3A631C952D71001FFB2B /* Melody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2B3A661C952D71001FFB2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC2B3A681C952D71001FFB2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC2B3A6B1C952D71001FFB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC2B3A6D1C952D71001FFB2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC2B3A701C952D71001FFB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 		CC2B3A791C952EAE001FFB2B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC2B3A681C952D71001FFB2B /* ViewController.swift */,
 				CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */,
 			);
 			name = Controller;
@@ -203,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC2B3A7D1C95310D001FFB2B /* APIManager.swift in Sources */,
-				CC2B3A691C952D71001FFB2B /* ViewController.swift in Sources */,
 				CC2B3A821C9532A2001FFB2B /* MusicVideo.swift in Sources */,
 				CC2B3A671C952D71001FFB2B /* AppDelegate.swift in Sources */,
 				CC2B3A891C9545D8001FFB2B /* MusicVideosTableViewController.swift in Sources */,

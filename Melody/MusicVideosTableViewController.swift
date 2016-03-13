@@ -10,6 +10,8 @@ import UIKit
 
 class MusicVideosTableViewController: UITableViewController {
 
+    var musicVideos = [MusicVideo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,34 +20,63 @@ class MusicVideosTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "internetReachabilityChanged", name: "ReachabilityStatusChanged", object: nil)
+        internetReachabilityChanged()
+        
+        let apiManager = APIManager()
+        apiManager.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json", completion: didLoadData)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func didLoadData(musicVideos: [MusicVideo]) {
+        self.musicVideos = musicVideos
+        tableView.reloadData()
+    }
+    
+    func internetReachabilityChanged() {
+        switch reachabilityStatus {
+        case NOACCESS: view.backgroundColor = UIColor.redColor()
+        //displayLabel.text = reachabilityStatus
+        //displayLabel.textColor = UIColor.whiteColor()
+        case WIFI: view.backgroundColor = UIColor.greenColor()
+        //displayLabel.text = reachabilityStatus
+        //displayLabel.textColor = UIColor.blackColor()
+        case WWAN: view.backgroundColor = UIColor.yellowColor()
+        //displayLabel.text = reachabilityStatus
+        //displayLabel.textColor = UIColor.blackColor()
+        default: return
+        }
+    }
+
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return musicVideos.count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("MusicVideoCell", forIndexPath: indexPath)
+        cell.textLabel!.text = musicVideos[indexPath.row].name
+        cell.detailTextLabel!.text = musicVideos[indexPath.row].artist
+        //cell.imageView!.image = UIImage(named: musicVideos[indexPath.row].imageUrl)
+        
         return cell
     }
-    */
+
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachabilityStatusChanged", object: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
