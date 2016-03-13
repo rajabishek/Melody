@@ -19,6 +19,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3K-YW-H9l">
                                 <rect key="frame" x="279" y="560" width="42" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="p6g-7D-jwY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,9 +29,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tso-QG-VdK">
                                 <rect key="frame" x="0.0" y="64" width="600" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="488" id="1cT-uK-wAZ"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicVideoCell" textLabel="CCm-i7-d62" detailTextLabel="bM5-1L-kCz" style="IBUITableViewCellStyleSubtitle" id="Nad-ap-wBe">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -63,12 +63,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Z3K-YW-H9l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7m3-8D-mLN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z3K-YW-H9l" secondAttribute="bottom" constant="20" id="JXH-LD-RZF"/>
-                            <constraint firstItem="Tso-QG-VdK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VeI-HO-Zcl"/>
-                            <constraint firstItem="Z3K-YW-H9l" firstAttribute="top" secondItem="Tso-QG-VdK" secondAttribute="bottom" constant="8" symbolic="YES" id="VxF-8c-76d"/>
-                            <constraint firstItem="Tso-QG-VdK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fv1-nT-HPE"/>
-                            <constraint firstItem="Tso-QG-VdK" firstAttribute="centerX" secondItem="Z3K-YW-H9l" secondAttribute="centerX" id="zlM-5T-DhT"/>
+                            <constraint firstItem="Tso-QG-VdK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kt0-YU-tBM"/>
+                            <constraint firstItem="Z3K-YW-H9l" firstAttribute="top" secondItem="Tso-QG-VdK" secondAttribute="bottom" constant="8" symbolic="YES" id="NW6-q4-SXS"/>
+                            <constraint firstItem="Tso-QG-VdK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UVR-EN-l1D"/>
+                            <constraint firstAttribute="trailing" secondItem="Tso-QG-VdK" secondAttribute="trailing" id="ZaK-MI-r8K"/>
+                            <constraint firstAttribute="bottom" secondItem="Z3K-YW-H9l" secondAttribute="bottom" constant="20" symbolic="YES" id="eXJ-xw-2S1"/>
+                            <constraint firstItem="Z3K-YW-H9l" firstAttribute="centerX" secondItem="Tso-QG-VdK" secondAttribute="centerX" id="kzF-ZG-BrA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eVP-qc-35y"/>
