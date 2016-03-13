@@ -80,6 +80,16 @@ class MusicVideosTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Storyboard.musicVideoDetailsSegueIdentifier {
+            if let indexpath = tableView.indexPathForSelectedRow {
+                if let destinationViewController = segue.destinationViewController as? MusicVideoDetailViewController {
+                    destinationViewController.musicVideo = musicVideos[indexpath.row]
+                }
+            }
+        }
+    }
+    
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachabilityStatusChanged", object: nil)
     }
