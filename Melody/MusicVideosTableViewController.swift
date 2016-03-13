@@ -9,6 +9,10 @@
 import UIKit
 
 class MusicVideosTableViewController: UITableViewController {
+    
+    private struct Storyboard {
+        static let musicVideoCellReuseIdentifier = "MusicVideoCell"
+    }
 
     var musicVideos = [MusicVideo]()
     
@@ -68,7 +72,7 @@ class MusicVideosTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MusicVideoCell", forIndexPath: indexPath) as! MusicVideoTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.musicVideoCellReuseIdentifier, forIndexPath: indexPath) as! MusicVideoTableViewCell
         let musicVideo = musicVideos[indexPath.row]
         cell.musicVideo = musicVideo
         
