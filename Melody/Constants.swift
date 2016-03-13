@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+typealias JSONDIctionary = [String: AnyObject]
+typealias JSONArray = [AnyObject]
