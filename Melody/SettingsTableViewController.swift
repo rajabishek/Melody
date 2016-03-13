@@ -32,6 +32,11 @@ class SettingsTableViewController: UITableViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         touchIdSwitch.on = defaults.boolForKey("shouldUseTouchId")
         imageQualitySwitch.on = defaults.boolForKey("betterImageQuality")
+        
+        if let count = defaults.objectForKey("apiCount") as? Int {
+            apiCountTextLabel.text = "\(count)"
+            apiCountSlider.value = Float(count)
+        }
     }
     
     @IBAction func changeImageQualitySettings(sender: UISwitch) {
@@ -44,6 +49,13 @@ class SettingsTableViewController: UITableViewController {
         defaults.setBool(touchIdSwitch.on, forKey: "shouldUseTouchId")
     }
 
+    @IBAction func apiCountChanged(sender: UISlider) {
+        let value = Int(apiCountSlider.value)
+        apiCountTextLabel.text = "\(value)"
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(value, forKey: "apiCount")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

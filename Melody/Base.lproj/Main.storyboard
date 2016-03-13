@@ -213,17 +213,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViF-Ke-q2D">
-                                                    <rect key="frame" x="285" y="31" width="31" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViF-Ke-q2D">
+                                                    <rect key="frame" x="291" y="31" width="18" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ViF-Ke-q2D" firstAttribute="centerX" secondItem="CMg-7r-ONQ" secondAttribute="centerX" id="2Ix-Qz-Swi"/>
-                                                <constraint firstItem="ViF-Ke-q2D" firstAttribute="centerY" secondItem="CMg-7r-ONQ" secondAttribute="centerY" id="JOS-c1-XQy"/>
-                                                <constraint firstItem="ViF-Ke-q2D" firstAttribute="top" secondItem="CMg-7r-ONQ" secondAttribute="topMargin" constant="23" id="NDO-OI-jvf"/>
+                                                <constraint firstItem="ViF-Ke-q2D" firstAttribute="top" secondItem="CMg-7r-ONQ" secondAttribute="topMargin" constant="23" id="Mbz-Yd-4IV"/>
+                                                <constraint firstItem="ViF-Ke-q2D" firstAttribute="centerX" secondItem="CMg-7r-ONQ" secondAttribute="centerX" id="ZeN-Ck-ZoM"/>
+                                                <constraint firstItem="ViF-Ke-q2D" firstAttribute="centerY" secondItem="CMg-7r-ONQ" secondAttribute="centerY" id="bVg-kF-I0U"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -234,8 +234,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="m1I-k2-xMU">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="m1I-k2-xMU">
                                                     <rect key="frame" x="100" y="27" width="400" height="31"/>
+                                                    <connections>
+                                                        <action selector="apiCountChanged:" destination="kQu-Qt-6ct" eventType="valueChanged" id="bI8-Va-d94"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <constraints>
