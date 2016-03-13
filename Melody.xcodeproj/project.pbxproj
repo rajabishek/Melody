@@ -15,6 +15,7 @@
 		CC2B3A7D1C95310D001FFB2B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A7C1C95310D001FFB2B /* APIManager.swift */; };
 		CC2B3A801C9531BA001FFB2B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A7F1C9531BA001FFB2B /* Constants.swift */; };
 		CC2B3A821C9532A2001FFB2B /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A811C9532A2001FFB2B /* MusicVideo.swift */; };
+		CC2B3A871C9533D1001FFB2B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A861C9533D1001FFB2B /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		CC2B3A7C1C95310D001FFB2B /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		CC2B3A7F1C9531BA001FFB2B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC2B3A811C9532A2001FFB2B /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
+		CC2B3A841C9533D1001FFB2B /* Melody-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Melody-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC2B3A851C9533D1001FFB2B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CC2B3A861C9533D1001FFB2B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,9 @@
 		CC2B3A831C9533A2001FFB2B /* Objective C */ = {
 			isa = PBXGroup;
 			children = (
+				CC2B3A851C9533D1001FFB2B /* Reachability.h */,
+				CC2B3A861C9533D1001FFB2B /* Reachability.m */,
+				CC2B3A841C9533D1001FFB2B /* Melody-Bridging-Header.h */,
 			);
 			name = "Objective C";
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 				CC2B3A691C952D71001FFB2B /* ViewController.swift in Sources */,
 				CC2B3A821C9532A2001FFB2B /* MusicVideo.swift in Sources */,
 				CC2B3A671C952D71001FFB2B /* AppDelegate.swift in Sources */,
+				CC2B3A871C9533D1001FFB2B /* Reachability.m in Sources */,
 				CC2B3A801C9531BA001FFB2B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,10 +317,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Melody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Compress.Melody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Melody/Melody-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -320,10 +331,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Melody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Compress.Melody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Melody/Melody-Bridging-Header.h";
 			};
 			name = Release;
 		};
