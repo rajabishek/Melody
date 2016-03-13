@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let apiManager = APIManager()
+        apiManager.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=10/json", completion: didLoadData)
+    }
+    
+    func didLoadData(musicVideos: [MusicVideo]) {
+        for (index, musicVideo) in musicVideos.enumerate() {
+            print(index, musicVideo.name)
+        }
     }
 
     override func didReceiveMemoryWarning() {
