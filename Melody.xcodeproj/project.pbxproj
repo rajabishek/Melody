@@ -17,6 +17,7 @@
 		CC2B3A871C9533D1001FFB2B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A861C9533D1001FFB2B /* Reachability.m */; };
 		CC2B3A891C9545D8001FFB2B /* MusicVideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */; };
 		CC2B3A8B1C9562AC001FFB2B /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */; };
+		CC9CA6CE1C95C39200D5D38A /* MusicVideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9CA6CD1C95C39200D5D38A /* MusicVideoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CC2B3A861C9533D1001FFB2B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideosTableViewController.swift; sourceTree = "<group>"; };
 		CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
+		CC9CA6CD1C95C39200D5D38A /* MusicVideoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */,
 				CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */,
+				CC9CA6CD1C95C39200D5D38A /* MusicVideoDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC2B3A7D1C95310D001FFB2B /* APIManager.swift in Sources */,
+				CC9CA6CE1C95C39200D5D38A /* MusicVideoDetailViewController.swift in Sources */,
 				CC2B3A821C9532A2001FFB2B /* MusicVideo.swift in Sources */,
 				CC2B3A671C952D71001FFB2B /* AppDelegate.swift in Sources */,
 				CC2B3A891C9545D8001FFB2B /* MusicVideosTableViewController.swift in Sources */,
@@ -363,6 +367,7 @@
 				CC2B3A771C952D71001FFB2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
