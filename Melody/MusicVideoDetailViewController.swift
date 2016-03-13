@@ -36,6 +36,7 @@ class MusicVideoDetailViewController: UIViewController {
         } else {
             imageView.image = UIImage(named: "noImage")
         }
+        title = musicVideo.artist
     }
 
     override func didReceiveMemoryWarning() {
