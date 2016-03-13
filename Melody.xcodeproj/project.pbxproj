@@ -16,6 +16,7 @@
 		CC2B3A821C9532A2001FFB2B /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A811C9532A2001FFB2B /* MusicVideo.swift */; };
 		CC2B3A871C9533D1001FFB2B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A861C9533D1001FFB2B /* Reachability.m */; };
 		CC2B3A891C9545D8001FFB2B /* MusicVideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */; };
+		CC2B3A8B1C9562AC001FFB2B /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CC2B3A851C9533D1001FFB2B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CC2B3A861C9533D1001FFB2B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideosTableViewController.swift; sourceTree = "<group>"; };
+		CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				CC2B3A881C9545D8001FFB2B /* MusicVideosTableViewController.swift */,
+				CC2B3A8A1C9562AC001FFB2B /* MusicVideoTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				CC2B3A671C952D71001FFB2B /* AppDelegate.swift in Sources */,
 				CC2B3A891C9545D8001FFB2B /* MusicVideosTableViewController.swift in Sources */,
 				CC2B3A871C9533D1001FFB2B /* Reachability.m in Sources */,
+				CC2B3A8B1C9562AC001FFB2B /* MusicVideoTableViewCell.swift in Sources */,
 				CC2B3A801C9531BA001FFB2B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Music Videos Table View Controller-->
@@ -14,28 +15,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicVideoCell" textLabel="7xn-v5-dWV" detailTextLabel="rfI-8Z-pbw" style="IBUITableViewCellStyleSubtitle" id="sma-W4-aPE">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicVideoCell" rowHeight="130" id="sma-W4-aPE" customClass="MusicVideoTableViewCell" customModule="Melody" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sma-W4-aPE" id="2jU-MZ-14N">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7xn-v5-dWV">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TgW-aO-I5b">
+                                            <rect key="frame" x="8" y="8" width="200" height="114"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="ShZ-m4-6PL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Video Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2v-11-ZQF">
+                                            <rect key="frame" x="216" y="37" width="376" height="85"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rfI-8Z-pbw">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-IR-Ybr">
+                                            <rect key="frame" x="216" y="8" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="GNF-hy-cOI"/>
+                                                <constraint firstAttribute="height" constant="21" id="m4Z-ap-w3d"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="leading" secondItem="2jU-MZ-14N" secondAttribute="leadingMargin" id="1iy-hx-KpO"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="bottom" secondItem="TgW-aO-I5b" secondAttribute="bottom" id="8Sq-Oo-BPb"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="leading" secondItem="ceG-IR-Ybr" secondAttribute="leading" id="C0N-PA-LrJ"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="top" secondItem="TgW-aO-I5b" secondAttribute="top" id="L62-VB-0je"/>
+                                        <constraint firstItem="TgW-aO-I5b" firstAttribute="centerY" secondItem="2jU-MZ-14N" secondAttribute="centerY" id="cyJ-ss-Sbb"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="leading" secondItem="TgW-aO-I5b" secondAttribute="trailing" constant="8" symbolic="YES" id="fcU-eY-hEE"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="trailing" secondItem="2jU-MZ-14N" secondAttribute="trailingMargin" id="iT5-vA-0LO"/>
+                                        <constraint firstItem="W2v-11-ZQF" firstAttribute="top" secondItem="ceG-IR-Ybr" secondAttribute="bottom" constant="8" symbolic="YES" id="iXc-fu-dTC"/>
+                                        <constraint firstItem="ceG-IR-Ybr" firstAttribute="top" secondItem="2jU-MZ-14N" secondAttribute="topMargin" id="vYq-eU-AAx"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

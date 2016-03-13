@@ -10,6 +10,8 @@ import Foundation
 
 class MusicVideo {
     
+    var rank = 0
+    
     let name: String
     
     let rights: String
