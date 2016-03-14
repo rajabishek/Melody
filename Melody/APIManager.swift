@@ -10,6 +10,7 @@ import Foundation
 
 class APIManager {
     
+    //Fetch the API data and parse it in the background and call the completion handler in the main queue
     func loadData(urlString: String, completion: ([MusicVideo]) -> Void) {
         if let url = NSURL(string: urlString) {
             let configuration = NSURLSessionConfiguration.ephemeralSessionConfiguration()
