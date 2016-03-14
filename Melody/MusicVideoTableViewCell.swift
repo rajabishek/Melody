@@ -24,14 +24,16 @@ class MusicVideoTableViewCell: UITableViewCell {
     
     func populateCellFromMusicVideo() {
         
-        nameTextLabel.text = musicVideo!.name
-        artistTextLabel.text = musicVideo!.artist
-        //musicVideoImageView.image = UIImage(named: "noImage")
-        
-        if let imageData = musicVideo!.imageData {
-            musicVideoImageView.image = UIImage(data: imageData)
-        } else {
-            getMusicVideoImage(musicVideo!, imageView: musicVideoImageView)
+        if musicVideo != nil {
+            nameTextLabel.text = musicVideo!.name
+            artistTextLabel.text = musicVideo!.artist
+            //musicVideoImageView.image = UIImage(named: "noImage")
+            
+            if let imageData = musicVideo!.imageData {
+                musicVideoImageView.image = UIImage(data: imageData)
+            } else {
+                getMusicVideoImage(musicVideo!, imageView: musicVideoImageView)
+            }
         }
     }
     
