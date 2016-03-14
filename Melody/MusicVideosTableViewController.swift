@@ -90,7 +90,7 @@ class MusicVideosTableViewController: UITableViewController {
         }
     }
     
-    deinit{
+    deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachabilityStatusChanged", object: nil)
     }
 
