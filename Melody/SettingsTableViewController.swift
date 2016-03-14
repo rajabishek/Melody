@@ -39,6 +39,11 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func changeImageQualitySettings(sender: UISwitch) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setBool(imageQualitySwitch.on, forKey: "betterImageQuality")
@@ -54,10 +59,5 @@ class SettingsTableViewController: UITableViewController {
         apiCountTextLabel.text = "\(value)"
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(value, forKey: "apiCount")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
