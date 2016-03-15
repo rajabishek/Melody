@@ -17,6 +17,10 @@ class MusicVideosTableViewController: UITableViewController {
 
     var musicVideos = [MusicVideo]()
     
+    var searchMusicVideos = [MusicVideo]()
+    
+    let resultSearchController = UISearchController(searchResultsController: nil)
+    
     var limit = 10
     
     override func viewDidLoad() {
@@ -24,6 +28,13 @@ class MusicVideosTableViewController: UITableViewController {
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor()]
         title = "The iTunes top \(limit) Music Videos"
+        
+        definesPresentationContext = true
+        resultSearchController.dimsBackgroundDuringPresentation = false
+        resultSearchController.searchBar.placeholder = "Search for Music Videos"
+        resultSearchController.searchBar.searchBarStyle = .Prominent
+        
+        tableView.tableHeaderView = resultSearchController.searchBar
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "internetReachabilityChanged", name: "ReachabilityStatusChanged", object: nil)
         internetReachabilityChanged()
@@ -90,12 +101,22 @@ class MusicVideosTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return musicVideos.count
+        if resultSearchController.active {
+            return searchMusicVideos.count
+        } else {
+            return musicVideos.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.musicVideoCellReuseIdentifier, forIndexPath: indexPath) as! MusicVideoTableViewCell
-        let musicVideo = musicVideos[indexPath.row]
+        
+        let musicVideo: MusicVideo
+        if resultSearchController.active {
+            musicVideo = searchMusicVideos[indexPath.row]
+        } else {
+            musicVideo = musicVideos[indexPath.row]
+        }
         cell.musicVideo = musicVideo
         
         return cell
@@ -105,7 +126,13 @@ class MusicVideosTableViewController: UITableViewController {
         if segue.identifier == Storyboard.musicVideoDetailsSegueIdentifier {
             if let indexpath = tableView.indexPathForSelectedRow {
                 if let destinationViewController = segue.destinationViewController as? MusicVideoDetailViewController {
-                    destinationViewController.musicVideo = musicVideos[indexpath.row]
+                    let musicVideo: MusicVideo
+                    if resultSearchController.active {
+                        musicVideo = musicVideos[indexpath.row]
+                    } else {
+                        musicVideo = searchMusicVideos[indexpath.row]
+                    }
+                    destinationViewController.musicVideo = musicVideo
                 }
             }
         }
