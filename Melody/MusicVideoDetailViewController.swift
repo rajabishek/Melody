@@ -46,6 +46,18 @@ class MusicVideoDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func shareMedia(sender: UIBarButtonItem) {
+        let activity1 = "Have you had the oppotunity to see this music video ?"
+        let activity2 = "\(musicVideo.name) by \(musicVideo.artist)"
+        let activity3 = "Watch it and tell me what you think ?"
+        let activity4 = musicVideo.linkToItunes
+        let activity5 = "(Shared with Music Video App - Step it up !)"
+        
+        let activityViewController = UIActivityViewController(activityItems: [activity1, activity2,activity3, activity4, activity5], applicationActivities: nil)
+    
+        self.presentViewController(activityViewController, animated: true, completion: nil)
+    }
 
     @IBAction func playVideo(sender: UIBarButtonItem) {
         if let url = NSURL(string: musicVideo.videoUrl) {
