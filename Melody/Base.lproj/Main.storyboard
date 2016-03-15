@@ -81,6 +81,12 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="iTunes Music Videos" id="Zfj-FM-OBQ"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="0jY-vp-XRn">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshData:" destination="Zog-11-447" eventType="valueChanged" id="Wco-1J-G1i"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAa-NH-tvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

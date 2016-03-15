@@ -17,8 +17,13 @@ class MusicVideosTableViewController: UITableViewController {
 
     var musicVideos = [MusicVideo]()
     
+    var limit = 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor()]
+        title = "The iTunes top \(limit) Music Videos"
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "internetReachabilityChanged", name: "ReachabilityStatusChanged", object: nil)
         internetReachabilityChanged()
@@ -27,6 +32,11 @@ class MusicVideosTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func refreshData(sender: UIRefreshControl) {
+        refreshControl?.endRefreshing()
+        getDataFromItunesApi()
     }
     
     func didLoadData(musicVideos: [MusicVideo]) {
@@ -47,14 +57,31 @@ class MusicVideosTableViewController: UITableViewController {
         default: view.backgroundColor =
             UIColor.greenColor()
             if musicVideos.isEmpty {
-                let apiManager = APIManager()
-                apiManager.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json", completion: didLoadData)
+                getDataFromItunesApi()
             } else {
                 print("Dont call the API at all")
             }
         }
     }
+    
+    func getApiCount() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let count = defaults.objectForKey("apiCount") as? Int {
+            limit = count
+        }
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "E, dd MM yyyy HH:mm:ss"
+        let refreshDate = dateFormatter.stringFromDate(NSDate())
+        
+        refreshControl?.attributedTitle = NSAttributedString(string: refreshDate)
+    }
 
+    func getDataFromItunesApi() {
+        getApiCount()
+        let apiManager = APIManager()
+        apiManager.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=\(limit)/json", completion: didLoadData)
+    }
 
     // MARK: - Table view data source
 
