@@ -55,7 +55,8 @@ class MusicVideoDetailViewController: UIViewController {
         let activity5 = "(Shared with Music Video App - Step it up !)"
         
         let activityViewController = UIActivityViewController(activityItems: [activity1, activity2,activity3, activity4, activity5], applicationActivities: nil)
-    
+        
+        //activityViewController.excludedActivityTypes = [UIActivityTypeMail]
         self.presentViewController(activityViewController, animated: true, completion: nil)
     }
 
