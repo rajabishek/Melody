@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MusicVideosTableViewController: UITableViewController {
+class MusicVideosTableViewController: UITableViewController, UISearchResultsUpdating {
     
     private struct Storyboard {
         static let musicVideoCellReuseIdentifier = "MusicVideoCell"
@@ -30,6 +30,7 @@ class MusicVideosTableViewController: UITableViewController {
         title = "The iTunes top \(limit) Music Videos"
         
         definesPresentationContext = true
+        resultSearchController.searchResultsUpdater = self
         resultSearchController.dimsBackgroundDuringPresentation = false
         resultSearchController.searchBar.placeholder = "Search for Music Videos"
         resultSearchController.searchBar.searchBarStyle = .Prominent
@@ -101,7 +102,7 @@ class MusicVideosTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if resultSearchController.active {
+        if resultSearchController.active && resultSearchController.searchBar.text != "" {
             return searchMusicVideos.count
         } else {
             return musicVideos.count
@@ -112,7 +113,7 @@ class MusicVideosTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.musicVideoCellReuseIdentifier, forIndexPath: indexPath) as! MusicVideoTableViewCell
         
         let musicVideo: MusicVideo
-        if resultSearchController.active {
+        if resultSearchController.active && resultSearchController.searchBar.text != "" {
             musicVideo = searchMusicVideos[indexPath.row]
         } else {
             musicVideo = musicVideos[indexPath.row]
@@ -127,7 +128,7 @@ class MusicVideosTableViewController: UITableViewController {
             if let indexpath = tableView.indexPathForSelectedRow {
                 if let destinationViewController = segue.destinationViewController as? MusicVideoDetailViewController {
                     let musicVideo: MusicVideo
-                    if resultSearchController.active {
+                    if resultSearchController.active && resultSearchController.searchBar.text != "" {
                         musicVideo = musicVideos[indexpath.row]
                     } else {
                         musicVideo = searchMusicVideos[indexpath.row]
@@ -136,6 +137,13 @@ class MusicVideosTableViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        if let string = searchController.searchBar.text {
+            searchMusicVideos = musicVideos.filter { $0.artist.lowercaseString.containsString(string.lowercaseString) }
+        }
+        tableView.reloadData()
     }
     
     deinit {
