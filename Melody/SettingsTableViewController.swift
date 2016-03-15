@@ -36,6 +36,9 @@ class SettingsTableViewController: UITableViewController {
         if let count = defaults.objectForKey("apiCount") as? Int {
             apiCountTextLabel.text = "\(count)"
             apiCountSlider.value = Float(count)
+        } else {
+            apiCountSlider.value = 10.0
+            apiCountTextLabel.text = "\(Int(apiCountSlider.value))"
         }
     }
     
