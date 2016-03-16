@@ -8,6 +8,7 @@
 
 import Foundation
 
+// These type aliases help during JSON Parsing
 typealias JSONDictionary = [String: AnyObject]
 typealias JSONArray = [AnyObject]
 
